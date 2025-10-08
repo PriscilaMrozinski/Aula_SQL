@@ -84,4 +84,11 @@ JOIN tb_disciplina AS d ON n.id_disciplina = d.id_disciplina
 ORDER BY n.nota DESC
 LIMIT 5;
 
+SELECT a.nome_aluno, n.nota, d.nome_disciplina
+FROM tb_notas AS n
+JOIN tb_aluno AS a ON n.id_aluno = a.id_aluno
+JOIN tb_disciplina AS d ON n.id_disciplina = d.id_disciplina
+WHERE n.nota > 5
+ORDER BY n.nota DESC;
+
 
